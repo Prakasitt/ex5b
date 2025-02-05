@@ -45,18 +45,9 @@
 					return;
 			   }
 		}
-		
-	    $(document).ready(function(){
-			$("button").click(function(){
-			   var t = $('#temp').val();//celsius
-			   var u = $('#unit').val();
-			   
-			   
-			   
-			   var t1;
-			   var u1;
-			   
-			   if(u == "F"){
+
+		function temperature(conversion){
+			if(u == "F"){
 					t1 = t * (9/5) + 32;
 					u1 = "Fahrenheit";
 			   }else if(u == "K"){
@@ -67,7 +58,22 @@
 					u1 = "Kelvin";
 			   }
 			   
+			   
+			   
+		}
+	    $(document).ready(function(){
+			$("button").click(function(){
+			   var t = $('#temp').val();//celsius
+			   var u = $('#unit').val();
+			   
+			   
+			   
+			   var t1;
+			   var u1;
+			   
+
 			   alert("Temperature is "+t1+" in "+u1);
+
 			});
 		});
 	</script>
